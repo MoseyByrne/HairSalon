@@ -11,7 +11,6 @@ div#footer {
 
 body#body {
   background-color: rgb(255, 234, 241);
-	background-image: radial-gradient(rgb(253, 200, 219), rgb(186, 220, 252), rgb(189, 253, 221), rgb(160, 160, 252), rgb(253, 200, 219), rgb(186, 220, 252), rgb(189, 253, 221), rgb(160, 160, 252), rgb(253, 200, 219), rgb(186, 220, 252), rgb(189, 253, 221), rgb(160, 160, 252), rgb(253, 200, 219), rgb(186, 220, 252), rgb(189, 253, 221), rgb(160, 160, 252));
 	padding-top: 15%;
 	padding-left: 25%;
 	padding-right: 25%;
@@ -20,13 +19,20 @@ body#body {
 
 div#stylists {
   background-color: lavender;
+	text-align: center;
 }
 
 div#home {
-  background-color: aliceblue;
-  padding-bottom: 100%;
+  background-color: rgb(217, 237, 255);
+	text-align: center;
 }
 
 div#clients {
-  background-color: mintcream;
+  background-color: rgb(230, 255, 243);
+	text-align: center;
+}
+
+p#link {
+ color: rgb(248, 4, 171);
+  margin-top: 10px;
 }

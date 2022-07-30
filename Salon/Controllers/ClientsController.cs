@@ -19,11 +19,13 @@ namespace Salon.Controllers
     public ActionResult Index()
     {
       List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
+      ViewBag.PageTitle = "View All Clients";
       return View(model);
     }
 
     public ActionResult Create()
     {
+      ViewBag.PageTitle = "Add New Client";
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
       return View();
     }

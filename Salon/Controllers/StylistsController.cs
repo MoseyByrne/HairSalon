@@ -1,8 +1,9 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Salon.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using Salon.Models;
 
 namespace Salon.Controllers
 {
@@ -18,11 +19,13 @@ namespace Salon.Controllers
     public ActionResult Index()
     {
       List<Stylist> model = _db.Stylists.ToList();
+      ViewBag.PageTitle = "View All Stylists";
       return View(model);
     }
 
     public ActionResult Create()
     {
+      ViewBag.PageTitle = "Add New Stylist";
       return View();
     }
 
@@ -36,36 +39,29 @@ namespace Salon.Controllers
 
     public ActionResult Details(int id)
     {
-      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-      return View(thisStylist);
-    }
-    public ActionResult Edit(int id)
-    {
-      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-      return View(thisStylist);
-    }
-
-    [HttpPost]
-    public ActionResult Edit(Stylist stylist)
-    {
-      _db.Entry(stylist).State = EntityState.Modified;
-      _db.SaveChanges();
-      return RedirectToAction("Index");
+      Stylist stylist = FindStylistById(id);
+      ViewBag.Clients = _db.Clients.Where(c => c.StylistId == stylist.StylistId).ToList();
+      return View(stylist);
     }
 
     public ActionResult Delete(int id)
     {
-      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-      return View(thisStylist);
+      Stylist stylist = FindStylistById(id);
+      return View(stylist);
     }
 
     [HttpPost, ActionName("Delete")]
-    public ActionResult DeleteConfirmed(int id)
+    public ActionResult Deleted(int id)
     {
-      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-      _db.Stylists.Remove(thisStylist);
+      Stylist stylist = FindStylistById(id);
+      _db.Stylists.Remove(stylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+
+    private Stylist FindStylistById(int id)
+    {
+      return _db.Stylists.FirstOrDefault(c => c.StylistId == id);
     }
   }
 }
