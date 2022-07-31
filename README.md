@@ -1,44 +1,96 @@
-README.md
+# Salon
 
-——— 
-Save as .md
+#### By Mo Byrne
 
-——— 
-
-# _{Application Name}_
-
-#### By _**{List of contributors}**_
-
-#### _{Brief description of application}_
+#### An application to keep track of a salon's stylists and their Clients.
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* C#
+* Razor
+* HTML
+* CSS
+* Bootstrap
+* MySQL
+* Entity
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+A webpage for the owner of an imaginary salon to add stylists when they are hired, then add their new clients to a list. Stylists' and clients' names and details are saved on a database. They can both be added to, edited, or deleted. 
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Open console application, and run the command
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+
+    ``git clone https://github.com/MoseyByrne/Salon``
+
+* Then run 
+
+    ``cd Salon``
+
+* You should now have a folder `Salon` with the following structure.
+    <pre>Salon
+    └── Salon
+        ├── Controllers
+        ├── Models
+        ├── ...
+        ├── README.md
+        └── Startup.cs</pre>
+
+* Add a file named appsettings.json in the following location 
+
+    <pre>Salon
+    └── Salon
+        ├── Controllers
+        ├── Models
+        ├── ...
+        ├── README.md
+        ├── Startup.cs
+        └── <strong>appsettings.json</strong></pre>
+
+* Copy and paste below JSON text in appsettings.json.
+
+```json
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=seung_lee;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE]"
+  }
+}
+```
+
+* Replace [YOUR-USERNAME-HERE] with your MySQL username.
+
+* Replace [YOUR-PASSWORD-HERE] with your MySQL password.
+
+
+* To navigate to the following directory in the console run ``cd Salon``
+  
+    <pre>Salon
+    └── <strong>Salon</strong>
+        ├── Controllers
+        ├── Models
+        ├── ...
+        ├── README.md
+        ├── Startup.cs
+        └── appsettings.json</pre>
+
+Run the following command in the console
+
+  ``dotnet build``
+
+Then run this command in the console
+
+  ``dotnet run``
+
+
+This program was built using _`Microsoft .NET SDK 5.0.401`_, and may not be compatible with other versions. Your milage may vary.
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known issues_
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) 07/30/2022 Mo Byrne
