@@ -1,4 +1,4 @@
-# Salon
+# HairSalon
 
 #### By Mo Byrne
 
@@ -23,15 +23,15 @@ A webpage for the owner of an imaginary salon to add stylists when they are hire
 * Open console application, and run the command
 
 
-    ``git clone https://github.com/MoseyByrne/Salon``
+    ``git clone https://github.com/MoseyByrne/HairSalon``
 
 * Then run 
 
-    ``cd Salon``
+    ``cd HairSalon``
 
-* You should now have a folder `Salon` with the following structure.
-    <pre>Salon
-    └── Salon
+* You should now have a folder `HairSalon` with the following structure.
+    <pre>HairSalon
+    └── HairSalon
         ├── Controllers
         ├── Models
         ├── ...
@@ -40,8 +40,8 @@ A webpage for the owner of an imaginary salon to add stylists when they are hire
 
 * Add a file named appsettings.json in the following location 
 
-    <pre>Salon
-    └── Salon
+    <pre>HairSalon
+    └── HairSalon
         ├── Controllers
         ├── Models
         ├── ...
@@ -64,10 +64,10 @@ A webpage for the owner of an imaginary salon to add stylists when they are hire
 * Replace [YOUR-PASSWORD-HERE] with your MySQL password.
 
 
-* To navigate to the following directory in the console run ``cd Salon``
+* To navigate to the following directory in the console run ``cd HairSalon``
   
-    <pre>Salon
-    └── <strong>Salon</strong>
+    <pre>HairSalon
+    └── <strong>HairSalon</strong>
         ├── Controllers
         ├── Models
         ├── ...
