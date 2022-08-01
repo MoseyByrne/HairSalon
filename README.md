@@ -2,7 +2,7 @@
 
 #### By Mo Byrne
 
-#### An application to keep track of a salon's stylists and their Clients.
+#### An application to keep track of a HairSalon's stylists and their Clients.
 
 ## Technologies Used
 
@@ -16,7 +16,7 @@
 
 ## Description
 
-A webpage for the owner of an imaginary salon to add stylists when they are hired, then add their new clients to a list. Stylists' and clients' names and details are saved on a database. They can both be added to, edited, or deleted. 
+A webpage for the owner of an imaginary HairSalon to add stylists when they are hired, then add their new clients to a list. Stylists' and clients' names and details are saved on a database. They can both be added to, edited, or deleted. 
 
 ## Setup/Installation Requirements
 
