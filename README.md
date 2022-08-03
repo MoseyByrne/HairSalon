@@ -54,7 +54,7 @@ A webpage for the owner of an imaginary HairSalon to add stylists when they are 
 ```json
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=seung_lee;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE]"
+      "DefaultConnection": "Server=localhost;Port=3306;database=mo_byrne;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE]"
   }
 }
 ```
